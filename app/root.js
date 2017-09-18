@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import {
 	Router,
 	IndexRoute,
@@ -10,6 +8,10 @@ import {
 	hashHistory
 } from 'react-router';
 
+import HeadSearch from './component/headSearch.js';
+import HeaderNav from './component/headerNav.js';
+
+import Home from './component/home.js';
 
 let Root = React.createClass({
 	componentDidMount() {
@@ -41,7 +43,9 @@ let Root = React.createClass({
 		return (
 
 			<div className="rootBody">
-				<div>你好{this.state.allList}</div>
+				<HeadSearch></HeadSearch>
+				<HeaderNav></HeaderNav>
+				<Home></Home>
 			</div>
 
 		)
