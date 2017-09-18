@@ -61,14 +61,34 @@ let Home = React.createClass({
 				<ul className="home_radio">
 					<li>
 						<img src="../../static/images/show1.jpg"/>
-						
+						<p>一人一首招牌歌</p>
 					</li>
 					<li>
 						<img src="../../static/images/show2.jpg"/>
+						<p>热歌</p>
 					</li>
-					
 				</ul>
 			</div>
+
+			<div className="hot-link">
+				<h4 className="Home_title">
+					<strong>热门歌单</strong>
+				</h4>
+				<p>去客户端发现更多音乐&gt;</p>
+
+				< a href="">查看电脑版网页</a>
+
+				<div className="footrt_logo">
+					<img src="../../static/images/logo_footer.png"/>
+				</div>
+
+
+
+			</div>	
+
+
+
+
 			</div>
 		)
 	}

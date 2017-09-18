@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../style/style.less';
+
+import MusicList from './musicList.js';
+
+import User from './user.js';
+
 let HeaderNav = React.createClass({
 	render() {
 		return (

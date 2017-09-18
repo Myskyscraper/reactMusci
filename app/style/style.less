@@ -53,6 +53,8 @@ body {
   color: #144874;
   font-family: "arial"!important;
   background: #fff;
+  display: flex;
+  flex-direction:column;
 }
 a {text-decoration: none;}
 
@@ -77,21 +79,23 @@ a {text-decoration: none;}
 .header_searc{
 	display: flex;
 	height: 0.9rem;
-	background: #333;
+	background: #31c27c;
 	align-items:center;
-
+	padding-left: 0.2rem;
 	input{
-		margin: 0 0 0 0.2rem;
+		padding-left: 0.2rem;
+		flex:4;
 		border:@baseColor;
 		height: 0.5rem;
 		padding-left: 0.1rem;
+		border-radius: 0.05rem;
 	}
 
 	span{
+		flex:1;
 		display: inline-block;
-		margin-left: 3.4rem;
 		.mixin(@width:0.5rem,@height:0.5rem);
-		background-image: url(../../static/images/search.png);
+		background: url(../../static/images/search.png) no-repeat center;
 	}
 }
 
@@ -124,17 +128,46 @@ a {text-decoration: none;}
 
 		li{
 			flex:1;
-			display: flex;
-			justify-content: center;
-			
 			img{
-				display: inline-block;
+				display: block;
+				margin: 0 auto;
 				.mixin(@width:3rem,@height:3rem);
+			}
+			p{
+				text-align: center;
+				line-height: 0.6rem;
+				font-size: 0.3rem;
 			}
 			
 		}
 
 	}
+	.hot-link{
+		background: #f4f4f4;
+		height: 4.35rem;
+		p{
+			margin-top: 0.5rem;
+			font-size: 0.28rem;
+			text-align: center;
+			color: rgba(0,0,0,.6)
+		}
+
+		a{	
+			display: block;
+			font-size: 0.3rem;
+			margin-top: 0.5rem;
+			text-align: center;
+		}
+		.footrt_logo{
+			.mixin(@width:2rem,@height:1rem);
+			margin: 0.5rem auto 0;
+			img{
+				width: 100%;
+			}
+		}
+		
+	}
+	
 }
 
 
