@@ -13,6 +13,8 @@ import HeaderNav from './component/headerNav.js';
 
 import Home from './component/home.js';
 
+import TestRouter from './component/testRouter.js';
+
 let Root = React.createClass({
 	componentDidMount() {
 		$("#player").jPlayer({
@@ -46,6 +48,8 @@ let Root = React.createClass({
 				<HeadSearch></HeadSearch>
 				<HeaderNav></HeaderNav>
 				<Home></Home>
+
+				<TestRouter></TestRouter>
 			</div>
 
 		)
