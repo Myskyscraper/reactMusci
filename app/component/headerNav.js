@@ -11,27 +11,51 @@ import {
 	hashHistory
 } from 'react-router';
 
+import Home from './home.js';
+
 import MusicList from './musicList.js';
 
 import User from './user.js';
 
+
+
 let HeaderNav = React.createClass({
 	render() {
 		return (
+			<div>
+				<Router history={hashHistory}>
 
-			< nav className = "HeaderNav" >
-			<li>推荐</li> < li > <Link to="/MusicList">歌单 </Link> < /li>  
+					<Route path="/" component={App}>
+						<Route path="/about" component={Home} />
+						<Route path="/about" component={MusicList} />
+						<Route path="/about" component={User} />
+					</Route>
 
-			< li > <Link to="/User">用户 </Link> < /li > 
-
-
-			< /nav>
-
-
+				</Router>
+			</div>
 		)
 	}
 
+})
+
+
+let App = React.createClass({
+	render() {
+		return (
+			<div>
+				< nav className = "HeaderNav" >
+					<li>  <Link to="/Home">排行</Link></li> 
+					< li ><Link to="/MusicList">歌单</Link>< /li>  
+					< li ><Link to="/User"> 用户</Link>< /li > 
+				< /nav>
+				 {this.props.children}
+
+			</div>
+		)
+	}
 
 })
+
+
 
 export default HeaderNav;

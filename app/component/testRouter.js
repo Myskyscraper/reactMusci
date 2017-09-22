@@ -22,15 +22,12 @@ let testRouter = React.createClass({
 		return (
 
 			<div className="testRouter">
+				
 				<Router history={hashHistory}>
 
 					<Route path="/" component={App}>
-					
 						<Route path="about" component={About} />
-
-						<Route path="inbox" component={Inbox}>
-							<Route path="messages/:id" component={Message} />
-						</Route>
+						<Route path="inbox" component={Inbox} />
 					</Route>
 
 				</Router>
@@ -74,12 +71,6 @@ const Inbox = React.createClass({
 				<h2>我是Inbox</h2>
 			</div>
 		)
-	}
-})
-
-const Message = React.createClass({
-	render() {
-		return <h3>我是Message {this.props.params.id}</h3>
 	}
 })
 

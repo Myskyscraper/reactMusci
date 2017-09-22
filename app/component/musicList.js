@@ -12,7 +12,6 @@ let MusicList = React.createClass({
 		)
 	}
 
-
 })
 
 export default MusicList;

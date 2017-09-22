@@ -15,6 +15,8 @@ import Home from './component/home.js';
 
 import TestRouter from './component/testRouter.js';
 
+import Test2Router from './component/test2Router.js';
+
 let Root = React.createClass({
 	componentDidMount() {
 		$("#player").jPlayer({
@@ -48,8 +50,6 @@ let Root = React.createClass({
 				<HeadSearch></HeadSearch>
 				<HeaderNav></HeaderNav>
 				<Home></Home>
-
-				<TestRouter></TestRouter>
 			</div>
 
 		)
